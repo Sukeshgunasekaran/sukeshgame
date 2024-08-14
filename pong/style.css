@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+canvas {
+    background-color: #000;
+    display: block;
+    border: 5px solid #fff; /* Inner canvas border */
+    box-shadow: 0px 0px 15px 3px rgba(255, 255, 255, 0.5); /* Glowing effect */
+    position: relative;
+    z-index: 1;
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 10px solid #fff; /* Outer box frame */
+    border-radius: 15px; /* Rounded corners */
+    position: relative;
+}
+
+.watermark {
+    position: absolute;
+    font-size: 36px; /* Slightly smaller font size */
+    color: rgba(255, 255, 255, 0.2); /* Increase the opacity for better visibility */
+    text-align: center;
+    z-index: 2; /* Ensure the watermark is above the canvas */
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Allow clicking through the watermark */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
